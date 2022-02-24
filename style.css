@@ -1,0 +1,173 @@
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-sky-blue: #2d85ff;
+  --color-dark-blue: #0021c8;
+  --color-black: #4d4d4d;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Annimation */
+  --animation-duration: 300ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.section {
+  text-align: center;
+  padding: 100px 0px;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+#navbar {
+  font-size: var(--font-regular);
+  background-color: var(--color-sky-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  opacity: 88%;
+}
+
+.navbar-logo {
+  font-size: var(--font-medium);
+  padding-right: 8px;
+  color: var(--color-white);
+  margin-left: 100px;
+}
+
+.navbar-list {
+  color: var(--color-white);
+  padding: 12px 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-btn {
+  cursor: pointer;
+  margin: 0px 12px;
+  padding: 8px;
+  border: 1px solid transparent;
+  transition: all var(--animation-duration) ease;
+}
+
+.navbar-btn.active,
+.navbar-btn:hover {
+  color: var(--color-sky-blue);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+#home {
+  background: center repeat url("imgs/main.png");
+}
+
+.home-profile {
+  width: 250px;
+  height: 250px;
+  border: 3px solid var(--color-white);
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.home-description,
+.home-title,
+.home-btn {
+  color: white;
+}
+
+.home-description,
+.home-title {
+  padding: 20px 0px;
+}
+
+.home-btn {
+  font-size: var(--font-medium);
+  border: 2px solid var(--color-white);
+  padding: 12px 8px;
+  border-radius: var(--size-border-radius);
+  transition: all var(--animation-duration) ease;
+}
+
+.home-btn:hover {
+  color: var(--color-sky-blue);
+  background-color: var(--color-white);
+}

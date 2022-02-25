@@ -19,9 +19,6 @@ document.addEventListener('scroll', () => {
 const navbarMenu = document.querySelector('.navbar-list');
 navbarMenu.addEventListener('click', (event) => {
     const link = event.target.dataset.link;
-    if (link == null) {
-        return;
-    }
     scrollIntoViews(link);
 })
 
@@ -38,10 +35,26 @@ function scrollIntoViews(selector) {
 }
 
 //Handle opacity when scorlling
-const home = document.querySelector('#home');
+const home = document.querySelector('.home-container');
 const homeHeight = home.getBoundingClientRect().height
 
 document.addEventListener('scroll', () => {
     const homeOpacity = 1 - (window.scrollY / homeHeight);
     home.style.opacity = homeOpacity;
+})
+
+
+//arrow up
+const btnArrow = document.querySelector('.arrow-up');
+btnArrow.addEventListener("click", () => {
+    scrollIntoViews('#home');
+})
+
+//make arrow btn visible when scrolling
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        btnArrow.classList.add('visible');
+    } else {
+        btnArrow.classList.remove('visible');
+    }
 })

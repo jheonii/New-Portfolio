@@ -58,3 +58,23 @@ document.addEventListener('scroll', () => {
         btnArrow.classList.remove('visible');
     }
 })
+
+//projects
+const workBtnContainer = document.querySelector('.project-titles');
+const projectContainer = document.querySelector('.projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach(project => {
+            if (filter === "*" || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    }, 200);
+})

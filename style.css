@@ -158,7 +158,6 @@ p {
 
 #home {
   background: center repeat url("imgs/main.png");
-  z-index: -1;
 }
 
 .home-profile {
@@ -339,15 +338,27 @@ p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  opacity: 1;
+  transition: all 300ms ease-in;
+}
+
+.projects.anim-out {
+  opacity: 0;
+  transform: scale(0.9) translateY(10px);
 }
 
 .project {
+  display: block;
   position: relative;
   width: 270px;
   height: 240px;
   margin: 2px;
   cursor: pointer;
   background-color: var(--color-light-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project-img {

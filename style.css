@@ -513,6 +513,7 @@ p {
 
   .navbar-logo {
     padding-top: 5px;
+    margin-left: 20px;
   }
 
   .navbar-list {
@@ -526,6 +527,7 @@ p {
 
   .toggle-button {
     display: block;
+    right: 20px;
   }
 
   .navbar-btn {
@@ -611,5 +613,11 @@ p {
 
   .testimonial-description {
     order: 1;
+  }
+
+  .arrow-up {
+    bottom: 20px;
+    right: 20px;
+    font-size: 50px;
   }
 }

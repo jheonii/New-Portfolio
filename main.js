@@ -1,5 +1,10 @@
 'use strict'
 
+//scrollIntoViews Function
+function scrollIntoViews(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: "smooth" })
+}
 
 //Make navbar transparent when it's on top
 const navbar = document.querySelector('#navbar');
@@ -35,11 +40,6 @@ homebtn.addEventListener('click', () => {
     scrollIntoViews("#contact")
 })
 
-//scrollIntoViews Function
-function scrollIntoViews(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({ behavior: "smooth" })
-}
 
 //Handle opacity when scorlling
 const home = document.querySelector('.home-container');
@@ -72,6 +72,12 @@ const projectContainer = document.querySelector('.projects');
 const projects = document.querySelectorAll('.project');
 
 workBtnContainer.addEventListener('click', (e) => {
+    //project titles button selection 
+    const projectBtn = document.querySelector('.project-button.project-active');
+    const projectBtnFilter = e.target.nodeName == 'BUTTON' ? e.target : e.target.parentNode;
+    projectBtn.classList.remove('project-active');
+    projectBtnFilter.classList.add('project-active')
+
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
@@ -85,4 +91,5 @@ workBtnContainer.addEventListener('click', (e) => {
         projectContainer.classList.remove('anim-out');
     }, 200);
 })
+
 

@@ -276,6 +276,11 @@ p {
 .skillset-left {
   padding: 30px 90px;
   flex-basis: 60%;
+  background-color: var(--color-grey);
+}
+
+.tools {
+  background-color: var(--color-light-grey);
 }
 
 .skillset-right {
@@ -307,13 +312,21 @@ p {
   padding: 20px 0px;
 }
 
+.project-titles {
+  display: inline;
+}
+
+.project-subtitle {
+  margin: 20px 0px;
+}
+
 .project-button {
   width: 160px;
   height: 40px;
   font-size: var(--font-regular);
   border: 2px solid var(--color-sky-blue);
   border-radius: var(--size-border-radius);
-  margin: 20px 10px;
+  margin: 0px 0px;
 }
 
 .project-count {
@@ -562,13 +575,15 @@ p {
     flex-direction: column;
   }
 
-  .skillset-left,
+  .skillset-left {
+    padding: 20px;
+  }
   .skillset-right {
-    padding: 20px 20px;
+    padding: 0px;
   }
 
   .project {
-    flex-grow: 3;
+    flex-grow: 1;
     margin: 10px 0px;
   }
 

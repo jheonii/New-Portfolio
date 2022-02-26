@@ -15,11 +15,18 @@ document.addEventListener('scroll', () => {
     }
 });
 
-//Handle scrolling when tapping on the navbar list
+//NavBar Handle scrolling when tapping on the navbar list
 const navbarMenu = document.querySelector('.navbar-list');
 navbarMenu.addEventListener('click', (event) => {
     const link = event.target.dataset.link;
     scrollIntoViews(link);
+    navbarMenu.classList.remove('open');
+})
+
+//Navbar toggle button
+const navbarToggleBtn = document.querySelector('.toggle-button');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 })
 
 //Handle scrolling to contact area
@@ -78,3 +85,4 @@ workBtnContainer.addEventListener('click', (e) => {
         projectContainer.classList.remove('anim-out');
     }, 200);
 })
+

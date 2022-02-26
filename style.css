@@ -119,9 +119,9 @@ p {
 
 .navbar-logo {
   font-size: var(--font-medium);
-  padding-right: 8px;
+  font-weight: var(--weight-semi-bold);
   color: var(--color-white);
-  margin-left: 100px;
+  margin-left: 40px;
 }
 
 .navbar-list {
@@ -129,6 +129,10 @@ p {
   padding: 12px 8px;
   display: flex;
   justify-content: space-around;
+}
+
+.navbar-list.open {
+  display: block;
 }
 
 .navbar-btn {
@@ -149,9 +153,9 @@ p {
 
 .toggle-button {
   position: absolute;
-  top: 24px;
+  top: 16px;
   right: 32px;
-  font-size: 32px;
+  font-size: 28px;
   color: var(--color-white);
   display: none;
 }
@@ -166,7 +170,6 @@ p {
   height: 250px;
   border: 3px solid var(--color-white);
   border-radius: 50%;
-  margin: 50px;
 }
 
 .home-profile:hover {
@@ -461,25 +464,47 @@ p {
 .arrow-up {
   position: fixed;
   bottom: 50px;
-  right: 50px;
+  right: 30px;
   font-size: 70px;
   color: var(--color-sky-blue);
-  opacity: 0;
+  display: none;
   transition: all 300ms ease-in;
 }
 
 .arrow-up.visible {
-  opacity: 1;
-  pointer-events: auto;
+  display: block;
+  /* opacity: 1;
+  pointer-events: auto; */
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 20px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  .section {
+    padding: 20px 20px;
+  }
+
+  #navbar {
+    padding: 16px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-sky-blue);
+  }
+
   .navbar-logo {
-    display: none;
+    padding-top: 5px;
   }
 
   .navbar-list {
     padding-top: 36px;
+    margin: 0px;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -491,12 +516,34 @@ p {
   }
 
   .navbar-btn {
+    text-align: center;
     margin: 5px 0px;
+  }
+
+  .home-profile {
+    margin-top: 50px;
+  }
+
+  .home-title {
+    margin-top: 20px;
+    padding: 0px;
+  }
+
+  .home-description {
+    margin: 0px;
+    padding: 10px 0px;
+  }
+
+  .home-btn {
+    margin: 20px 0px;
+    color: var(--color-sky-blue);
+    background-color: var(--color-white);
   }
 
   .about-experts {
     flex-direction: column;
     align-items: center;
+    margin: 20px 0px;
   }
 
   .expert {
@@ -525,8 +572,29 @@ p {
     margin: 10px 0px;
   }
 
+  .project-button {
+    margin: 10px 0px;
+  }
+
+  #testimonials {
+    padding: 0px;
+  }
   .testimonial {
     flex-direction: column;
     align-items: center;
+  }
+
+  .testimonial-profile:nth-child(even) {
+    margin-left: 0px;
+    padding: 10px;
+  }
+
+  .testimonial-profile:nth-child(odd) {
+    margin-right: 0px;
+    padding: 10px;
+  }
+
+  .testimonial-description {
+    order: 1;
   }
 }

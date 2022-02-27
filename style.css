@@ -23,7 +23,7 @@
 
   /* Font weight */
   --weight-bold: 700;
-  --weight-semi-bold: 600;
+  --weight-semi-bold: 500;
   --weight-regular: 400;
 
   /* Size */
@@ -165,6 +165,7 @@ p {
 }
 
 .home-profile {
+  margin-top: 40px;
   cursor: pointer;
   width: 250px;
   height: 250px;
@@ -244,6 +245,10 @@ p {
 .career-img {
   width: 200px;
   margin-right: 40px;
+}
+
+.career-description {
+  width: 300px;
 }
 
 .expert-title {
@@ -366,8 +371,8 @@ p {
 .project {
   display: block;
   position: relative;
-  width: 270px;
-  height: 240px;
+  width: 250px;
+  height: 250px;
   margin: 2px;
   cursor: pointer;
   background-color: var(--color-light-white);
@@ -378,9 +383,9 @@ p {
 }
 
 .project-img {
-  max-width: 100%;
-  max-height: 100%;
-  align-self: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-description {
@@ -569,6 +574,9 @@ p {
     flex-direction: column;
   }
 
+  .career-img {
+    margin: 0px;
+  }
   .career-description {
     padding: 20px 0px;
   }
